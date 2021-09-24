@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "ESNEXT",
+    "target": "ES5",
+    "noEmit": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules", "./src"],
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
+    }
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist"]
+}

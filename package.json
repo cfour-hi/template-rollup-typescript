@@ -1,0 +1,29 @@
+{
+  "name": "template-rollup-typescript",
+  "version": "1.0.0",
+  "module": "./dist/index.esm.ks",
+  "main": "./dist/index.umd.js",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "declaration"
+  ],
+  "scripts": {
+    "declaration": "rm -rf ./declaration && tsc -p tsconfig.build.json --declarationDir declaration",
+    "build": "rm -rf ./dist && rollup -c && npm run declaration",
+    "demo": "rollup -c rollup.config.demo.js -w & live-server",
+    "release": "zx ./release.mjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "live-server": "^1.2.1",
+    "rollup": "^2.57.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.4.3"
+  }
+}
